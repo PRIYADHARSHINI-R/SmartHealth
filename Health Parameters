@@ -1,0 +1,30 @@
+
+console.log('IoT Sensor device info:'
+
+
+              + '\n Device model:  ' + iotsensor.getDeviceModel()
+
+
+              + '\n Firmware:      ' + iotsensor.getFirmwareString()
+
+
+              + '\n Heart rate: ' + iotsensor.isHeartRatesAvailable()
+
+
+              + '\n Sleep:     ' + iotsensor.isSleepAvailable()
+
+
+              + '\n Respiration rate:  ' + iotsensor.isRespirationRateAvailable()
+
+
+              + '\n Oxygen level:     ' + iotsensor.isOxygenlevelAvailable()
+
+
+              + '\n Temperature:   ' + iotsensor.isTemperatureAvailable()
+
+
+              + '\n Humidity:      ' + iotsensor.isHumidityAvailable()
+
+
+              + '\n Sensor Fusion: ' + iotsensor.isSflAvailable());
+
