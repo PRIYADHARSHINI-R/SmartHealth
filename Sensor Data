@@ -1,0 +1,49 @@
+
+<script src="libs/evothings/dialog-iotsensor/iotsensor.js"></script>
+
+var type = evothings.iotsensor.SFL; // Device type we are connecting 
+
+var iotsensor = evothings.iotsensor.createInstance(type); // Create a new IoT
+
+iotsensor.connectToClosestSensor(3000)  // Scan for 3000ms
+
+function()
+{
+   console.log('We are connected!');
+},
+
+function(error)
+{
+  console.log('Disconnect error: ' + error);
+}
+);
+
+iotsensor.startScanningForDevices(
+function(device)
+{
+   console.log('Device found: ' + device.name + ' RSSI: ' + device.rssi);
+       if(iotsensor.isIoTSensor(device))
+{
+
+// We have an IoT Sensor
+
+iotsensor.connectToDevice(device)
+function()
+{
+// Connected and device is ready
+},
+
+function(error)
+{
+    console.log('Disconnect error ' + error);
+}
+);
+}
+}
+);
+
+
+
+
+
+
